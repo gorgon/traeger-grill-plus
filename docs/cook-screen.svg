@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="640" viewBox="0 0 360 640" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="5" y="5" width="350" height="630" rx="28" fill="#f7f3ec" stroke="#d8cfc0" stroke-width="2"/>
+  <!-- header -->
+  <circle cx="30" cy="42" r="6" fill="#8a9a5b"/>
+  <text x="46" y="48" font-size="16" font-weight="700" fill="#2b2118">Our Traeger</text>
+  <rect x="152" y="28" width="86" height="26" rx="13" fill="#e3ecd9"/>
+  <text x="195" y="46" font-size="12" font-weight="700" fill="#4c6b34" text-anchor="middle">COOKING</text>
+  <text x="330" y="48" font-size="12" fill="#6b5d4f" text-anchor="end">just now</text>
+  <!-- tiles -->
+  <rect x="22" y="70" width="98" height="86" rx="12" fill="#ffffff" stroke="#e4dccf"/>
+  <text x="71" y="94" font-size="11" fill="#6b5d4f" text-anchor="middle">GRILL</text>
+  <text x="71" y="126" font-size="24" font-weight="700" fill="#2b2118" text-anchor="middle">250°</text>
+  <path d="M38,140 L58,136 L78,140 L104,138" stroke="#8a9a5b" stroke-width="2" fill="none"/>
+  <rect x="131" y="70" width="98" height="86" rx="12" fill="#ffffff" stroke="#e4dccf"/>
+  <text x="180" y="94" font-size="11" fill="#6b5d4f" text-anchor="middle">PROBE</text>
+  <text x="180" y="126" font-size="24" font-weight="700" fill="#2b2118" text-anchor="middle">198°</text>
+  <path d="M147,142 L167,139 L187,136 L213,133" stroke="#8a9a5b" stroke-width="2" fill="none"/>
+  <rect x="240" y="70" width="98" height="86" rx="12" fill="#ffffff" stroke="#e4dccf"/>
+  <text x="289" y="94" font-size="11" fill="#6b5d4f" text-anchor="middle">SET</text>
+  <text x="289" y="126" font-size="24" font-weight="700" fill="#b4552d" text-anchor="middle">250°</text>
+  <!-- program -->
+  <text x="22" y="192" font-size="17" font-weight="700" fill="#2b2118">🥩 Chuck Roast 2–3 lb</text>
+  <text x="338" y="192" font-size="13" fill="#6b5d4f" text-anchor="end">4 / 7</text>
+  <!-- done stage -->
+  <rect x="22" y="206" width="316" height="46" rx="10" fill="#efe9dd"/>
+  <text x="38" y="235" font-size="14" fill="#6b5d4f">✓  Smoke to 165°F</text>
+  <!-- active stage -->
+  <rect x="22" y="262" width="316" height="196" rx="12" fill="#ffffff" stroke="#b4552d" stroke-width="2"/>
+  <text x="38" y="292" font-size="15" font-weight="700" fill="#2b2118">4 · Wrapped finish — to 203°F</text>
+  <text x="38" y="330" font-size="21" font-weight="700" fill="#2b2118">Probe 198° → 203°</text>
+  <rect x="38" y="344" width="284" height="8" rx="4" fill="#e4dccf"/>
+  <rect x="38" y="344" width="238" height="8" rx="4" fill="#b4552d"/>
+  <text x="38" y="376" font-size="13" fill="#6b5d4f">≈ 25 min left · counting down live</text>
+  <text x="38" y="404" font-size="13" fill="#2b2118">Wrapped, the roast braises while its collagen</text>
+  <text x="38" y="424" font-size="13" fill="#2b2118">melts into gelatin — that's what makes it tender.</text>
+  <text x="38" y="444" font-size="13" fill="#2b2118">Near 203° the probe slides in almost freely.</text>
+  <!-- upcoming -->
+  <rect x="22" y="468" width="316" height="58" rx="10" fill="#efe9dd"/>
+  <text x="38" y="493" font-size="14" fill="#2b2118">5 · Take packet off the grill</text>
+  <text x="38" y="514" font-size="12" font-weight="700" fill="#b4552d">YOUR JOB — preview shown before the stage</text>
+  <rect x="22" y="536" width="316" height="52" rx="10" fill="#efe9dd"/>
+  <text x="38" y="568" font-size="14" fill="#2b2118">6 · Rest covered — 45 min timer</text>
+  <text x="22" y="606" font-size="11" fill="#6b5d4f">Anatomy of the cook screen (Version 28 layout, drawn from the real UI).</text>
+</svg>
