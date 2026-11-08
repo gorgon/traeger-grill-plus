@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px; --text-xs--line-height: 16px;
+  --text-sm: 14px; --text-sm--line-height: 20px;
+  --text-base: 16px; --text-base--line-height: 24px;
+  --text-lg: 18px; --text-lg--line-height: 28px;
+  --text-xl: 20px; --text-xl--line-height: 28px;
+  --text-2xl: 24px; --text-2xl--line-height: 32px;
+  --text-3xl: 30px; --text-3xl--line-height: 36px;
+  --text-4xl: 36px; --text-4xl--line-height: 40px;
+  --text-5xl: 48px; --text-5xl--line-height: 52px;
+}
+
+/* Theme model: dark is the base palette. Light applies when the owner picks
+   it in the header (data-theme="light", persisted in localStorage and set
+   before first paint by the inline script in index.html) or when the phone
+   is in light mode and no manual choice exists. A manual dark choice
+   (data-theme="dark") always wins over the system. The two light blocks
+   below must stay identical. */
+:root {
+  color-scheme: dark;
+  --bg: #14100d;
+  --surface: #241c16;
+  --surface2: #1d1712;
+  --text: #f5efe8;
+  --dim: #a89f96;
+  --border: #3a2f26;
+  --accent: #ff6b1a;
+  --accent-text: #ffb37e;
+  --red: #e5482e;
+  --green: #4caf7d;
+  --radius: 14px;
+  --frame: #000000;
+  --track: rgba(0, 0, 0, 0.5);
+  --scrim: rgba(0, 0, 0, 0.7);
+  --scrim-soft: rgba(0, 0, 0, 0.3);
+  --ok-bg: #173d2a;
+  --ok-text: #7be3ab;
+  --bad-bg: #3d1710;
+  --bad-text: #ff9d7e;
+  --bad-text-bright: #ffb0a0;
+  --info-bg: #17303d;
+  --info-text: #7ec8e3;
+  --info-text-bright: #a8d8f0;
+  --info-subtext: #c7e6f5;
+  --warn-bg: #2e2108;
+  --warn-text: #ffcf7a;
+  --warn-subtext: #e8c88a;
+  --accent-soft: #2b1a0e;
+  --on-accent: #1a0e04;
+  --on-green: #0c2417;
+  --idle-dot: #c9a86a;
+  --held-fill: #6b6259;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface2);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f7f2ea;
+  --surface: #ffffff;
+  --surface2: #f0e9dd;
+  --text: #221709;
+  --dim: #6d5f4e;
+  --border: #ddd0ba;
+  --accent: #e85d10;
+  --accent-text: #9a4a08;
+  --red: #c93a22;
+  --green: #2e7d52;
+  --frame: #e6dccb;
+  --track: rgba(74, 52, 25, 0.2);
+  --scrim: rgba(43, 28, 8, 0.45);
+  --ok-bg: #dcf2e3;
+  --ok-text: #14663a;
+  --bad-bg: #fde3da;
+  --bad-text: #a52a12;
+  --bad-text-bright: #b3270f;
+  --info-bg: #d9ebf7;
+  --info-text: #0f5b82;
+  --info-text-bright: #0a4a6b;
+  --info-subtext: #175d80;
+  --warn-bg: #fdeed0;
+  --warn-text: #7c4d03;
+  --warn-subtext: #8a5f14;
+  --accent-soft: #fde8d8;
+  --on-green: #ffffff;
+  --idle-dot: #a07d2c;
+  --held-fill: #a08b6d;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --bg: #f7f2ea;
+    --surface: #ffffff;
+    --surface2: #f0e9dd;
+    --text: #221709;
+    --dim: #6d5f4e;
+    --border: #ddd0ba;
+    --accent: #e85d10;
+    --accent-text: #9a4a08;
+    --red: #c93a22;
+    --green: #2e7d52;
+    --frame: #e6dccb;
+    --track: rgba(74, 52, 25, 0.2);
+    --scrim: rgba(43, 28, 8, 0.45);
+    --ok-bg: #dcf2e3;
+    --ok-text: #14663a;
+    --bad-bg: #fde3da;
+    --bad-text: #a52a12;
+    --bad-text-bright: #b3270f;
+    --info-bg: #d9ebf7;
+    --info-text: #0f5b82;
+    --info-text-bright: #0a4a6b;
+    --info-subtext: #175d80;
+    --warn-bg: #fdeed0;
+    --warn-text: #7c4d03;
+    --warn-subtext: #8a5f14;
+    --accent-soft: #fde8d8;
+    --on-green: #ffffff;
+    --idle-dot: #a07d2c;
+    --held-fill: #a08b6d;
+  }
+}
+.font-display { font-family: "Archivo", system-ui, sans-serif; }
+@keyframes alarmflash { 0%,100% { background:#e5482e; } 50% { background:#7a1405; } }
+.alarm-flash { animation: alarmflash 0.9s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100% { opacity:1; } 50% { opacity:0.35; } }
+.pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+html, body { overscroll-behavior: none; }
+@keyframes pulsering { 0%,100% { box-shadow: 0 0 0 0 rgba(255,107,26,0.55); } 50% { box-shadow: 0 0 0 9px rgba(255,107,26,0); } }
+.pulse-ring { animation: pulsering 1.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .alarm-flash, .pulse-dot, .pulse-ring { animation: none; } }

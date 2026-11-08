@@ -1,0 +1,10 @@
+CREATE TABLE test_runs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  suite TEXT NOT NULL,
+  scenario TEXT NOT NULL,
+  rule TEXT NOT NULL,
+  passed INTEGER NOT NULL,
+  detail TEXT NOT NULL,
+  run_at INTEGER NOT NULL,
+  build_id TEXT NOT NULL
+);

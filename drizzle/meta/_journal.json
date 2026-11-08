@@ -1,0 +1,83 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1794072232485,
+      "tag": "0001_initial",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794072232485,
+      "tag": "0002_grill_state_and_cook_sessions",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794087092040,
+      "tag": "0003_add_last_selected_meat",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1794087361734,
+      "tag": "0004_add_timer_hold_start",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1794088009166,
+      "tag": "0005_add_grill_system_state",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1794088280751,
+      "tag": "0006_add_setpoint_corrections",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1794089345526,
+      "tag": "0007_add_stage_start_probe_and_alarm_acks",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1794089345526,
+      "tag": "0008_add_grill_snapshots_history",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1794090076047,
+      "tag": "0009_add_test_runs",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1794092674903,
+      "tag": "0010_add_carried_forward_flag_to_snapshots",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1794092674903,
+      "tag": "0011_add_traeger_auth_token_table",
+      "breakpoints": true
+    }
+  ]
+}
