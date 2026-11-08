@@ -107,6 +107,16 @@ server/src/
   schema.ts          Database schema
 drizzle/             SQL migrations 0001–0011
 DATA-PLAN.md         Data model and storage plan
+tools/               The standalone Python WiFIRE toolkit the app grew out of:
+  traeger_client.py    v2 cloud client — auth, grill discovery, commands (read-only
+                       by default; state-changing commands require --confirm)
+  monitor.py           Live cook monitor: streams MQTT state, holds the recipe's
+                       setpoint, fires an event when the probe crosses its target
+  run_once.py          One-shot read-only grill state check
+  auth_diag.py         Single-attempt auth diagnostic (never prints the secret)
+  cors-probe-report.md The measured CORS probe behind the server-side design
+  Credentials reach these scripts only via stdin or local environment variables —
+  never argv, never files, never logs.
 ```
 
 ## Security model
@@ -124,6 +134,8 @@ DATA-PLAN.md         Data model and storage plan
 
 ## Status & history
 
-Built and cooked with on Nov 7, 2026. First cook: a 2–3 lb chuck roast, 250 °F, wrapped at 165 °F, finished at 203 °F. Recent milestones: **v26** live refresh fixed in production (raw-socket MQTT worker) · **v27** live-ticking countdown from current-stage data + scroll-to-current-stage + band-first trends · **v28** automatic ~60 s refetch while open, legacy "ask the assistant to check" path removed, self-healing keep-awake, speech unlock, one-meaning-one-place UI pass, why-lines on all 56 stages.
+Built and cooked with on Nov 7, 2026. First cook **completed the same day**: a 2–3 lb chuck roast at 250 °F — smoked on the grate, wrapped in foil with onions at 165 °F, finished probe-tender at 203 °F, rested 45 minutes, shredded. Recent milestones: **v26** live refresh fixed in production (raw-socket MQTT worker) · **v27** live-ticking countdown from current-stage data + scroll-to-current-stage + band-first trends · **v28** automatic ~60 s refetch while open, legacy "ask the assistant to check" path removed, self-healing keep-awake, speech unlock, one-meaning-one-place UI pass, why-lines on all 56 stages.
+
+**Known gap found by the first cook (fix designed, not yet built):** the in-app Shutdown button *records* a shutdown request but has no executor — nothing sends the real command (`17`), so the grill kept cooking until the command was sent from the Python toolkit. Next version: the button executes directly via the app's stored login after the existing warning confirmation; when the final stage completes, Shutdown becomes the primary action (still never automatic — a resting cook may want the grill warm); and the grill's shutdown/cooling state (`system_status` 8) joins the state map.
 
 *Unofficial personal project. Not affiliated with Traeger, Inc. Use of Traeger's cloud is via the same interfaces as the official app; Traeger's terms may restrict automated access — run it on your own account, at your own judgement.*
